@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 9
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':turboBase')
+    provided files('libs/TurboLauncher.jar')
+    compile 'com.android.support:support-v4:18.0.0'
+}

@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "com.cooeeui.brand.turbolauncher"
+        minSdkVersion 8
+        targetSdkVersion 14
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-launcher.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile project(':turboBase')
+    compile project(':turboLiteThemeBox')
+    compile project(':turboSearchBar')
+}

@@ -1,0 +1,146 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From TurboBase:
+* proguard.cfg
+From TurboClean:
+* ic_launcher-web.png
+* proguard-project.txt
+From TurboClean4:
+* ic_launcher-web.png
+* proguard-project.txt
+From TurboLauncher:
+* .DS_Store
+* jni/
+* jni/libcut/
+* jni/libcut/Android.mk
+* jni/libcut/Application.mk
+* jni/libcut/jniclib.cpp
+* jni/libcut/jtool.cpp
+* jni/libcut/utf8togb.cpp
+* jni/libfeedback/
+* jni/libfeedback/Android.mk
+* jni/libfeedback/feedback-jni.c
+From TurboLiteThemeBox:
+* .DS_Store
+* proguard.cfg
+From TurboSearchBar:
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In TurboBase:
+* AndroidManifest.xml => turboBase/src/main/AndroidManifest.xml
+* TweenEngine/ => turboBase/src/main/java/
+* libs/armeabi-v7a/libcoo.so => turboBase/src/main/jniLibs/armeabi-v7a/libcoo.so
+* libs/armeabi-v7a/libcooeefb-jni.so => turboBase/src/main/jniLibs/armeabi-v7a/libcooeefb-jni.so
+* libs/armeabi-v7a/libcoogl20.so => turboBase/src/main/jniLibs/armeabi-v7a/libcoogl20.so
+* libs/armeabi-v7a/libcut.so => turboBase/src/main/jniLibs/armeabi-v7a/libcut.so
+* libs/armeabi/libcoo.so => turboBase/src/main/jniLibs/armeabi/libcoo.so
+* libs/armeabi/libcooeefb-jni.so => turboBase/src/main/jniLibs/armeabi/libcooeefb-jni.so
+* libs/armeabi/libcoogl20.so => turboBase/src/main/jniLibs/armeabi/libcoogl20.so
+* libs/armeabi/libcut.so => turboBase/src/main/jniLibs/armeabi/libcut.so
+* libs/gdx.jar => turboBase/libs/gdx.jar
+* libs/gdx_backends_android.jar => turboBase/libs/gdx_backends_android.jar
+* libs/libGoogleAnalyticsServices.jar => turboBase/libs/libGoogleAnalyticsServices.jar
+* libs/mta-sdk-1.6.2.jar => turboBase/libs/mta-sdk-1.6.2.jar
+* libs/open_sdk_r3806.jar => turboBase/libs/open_sdk_r3806.jar
+* libs/umeng-analytics-v5.2.4.jar => turboBase/libs/umeng-analytics-v5.2.4.jar
+* libs/umeng-fb-v4.3.2.jar => turboBase/libs/umeng-fb-v4.3.2.jar
+* libs/umeng-update-v2.4.2.jar => turboBase/libs/umeng-update-v2.4.2.jar
+* lint.xml => turboBase/lint.xml
+* res/ => turboBase/src/main/res/
+* src/ => turboBase/src/main/java/
+* src/com/thirdParty/pinyin4j/hp/hpl/sparta/xpath/doc-files/LGPL.txt => turboBase/src/main/resources/com/thirdParty/pinyin4j/hp/hpl/sparta/xpath/doc-files/LGPL.txt
+* src/com/thirdParty/pinyin4j/hp/hpl/sparta/xpath/package.html => turboBase/src/main/resources/com/thirdParty/pinyin4j/hp/hpl/sparta/xpath/package.html
+In TurboClean:
+* AndroidManifest.xml => turboClean/src/main/AndroidManifest.xml
+* lint.xml => turboClean/lint.xml
+* res/ => turboClean/src/main/res/
+* src/ => turboClean/src/main/java/
+In TurboClean4:
+* AndroidManifest.xml => turboClean4/src/main/AndroidManifest.xml
+* assets/ => turboClean4/src/main/assets/
+* lint.xml => turboClean4/lint.xml
+* res/ => turboClean4/src/main/res/
+* src/ => turboClean4/src/main/java/
+In TurboLiteThemeBox:
+* AndroidManifest.xml => turboLiteThemeBox/src/main/AndroidManifest.xml
+* assets/ => turboLiteThemeBox/src/main/assets/
+* res/ => turboLiteThemeBox/src/main/res/
+* src/ => turboLiteThemeBox/src/main/java/
+* src/.DS_Store => turboLiteThemeBox/src/main/resources/.DS_Store
+* src/com/.DS_Store => turboLiteThemeBox/src/main/resources/com/.DS_Store
+* src/com/coco/.DS_Store => turboLiteThemeBox/src/main/resources/com/coco/.DS_Store
+* gallery_normal.JPG => gallery_normal.jpg
+* gallery_scene.JPG => gallery_scene.jpg
+* livewallpaper_normal.JPG => livewallpaper_normal.jpg
+* livewallpaper_scene.JPG => livewallpaper_scene.jpg
+* lockwallpaper_scene.JPG => lockwallpaper_scene.jpg
+In TurboNumberClock:
+* AndroidManifest.xml => turboNumberClock/src/main/AndroidManifest.xml
+* assets/ => turboNumberClock/src/main/assets/
+* lint.xml => turboNumberClock/lint.xml
+* res/ => turboNumberClock/src/main/res/
+* src/ => turboNumberClock/src/main/java/
+In TurboSearchBar:
+* AndroidManifest.xml => turboSearchBar/src/main/AndroidManifest.xml
+* assets/ => turboSearchBar/src/main/assets/
+* libs/easou_mads_SDK_wy_1.6.2.jar => turboSearchBar/libs/easou_mads_SDK_wy_1.6.2.jar
+* libs/easou_search_sdk_v1.0.jar => turboSearchBar/libs/easou_search_sdk_v1.0.jar
+* lint.xml => turboSearchBar/lint.xml
+* res/ => turboSearchBar/src/main/res/
+* src/ => turboSearchBar/src/main/java/
+In TurboLauncher:
+* AndroidManifest.xml => turboLauncher/src/main/AndroidManifest.xml
+* assets/ => turboLauncher/src/main/assets/
+* proguard-launcher.cfg => turboLauncher/proguard-launcher.cfg
+* res/ => turboLauncher/src/main/res/
+* src/ => turboLauncher/src/main/java/
+* src/com/blueflash/interfaces/IKingsReviveService2.aidl => turboLauncher/src/main/aidl/com/blueflash/interfaces/IKingsReviveService2.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
